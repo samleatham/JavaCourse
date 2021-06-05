@@ -5,8 +5,8 @@ public class MortgageCalculator {
     private float annualInterest;
     private byte years;
 
-    final static byte MONTHS_IN_YEAR = 12;
-    final static byte PERCENT = 100;
+    private final static byte MONTHS_IN_YEAR = 12;
+    private final static byte PERCENT = 100;
 
     public MortgageCalculator(int principal, float annualInterest, byte years){
         setPrincipal(principal);
@@ -75,9 +75,5 @@ public class MortgageCalculator {
             throw new IllegalArgumentException("Please provide a number of years greater than 0");
         }
         this.years = years;
-    }
-
-    public byte getYears() {
-        return years;
     }
 }
